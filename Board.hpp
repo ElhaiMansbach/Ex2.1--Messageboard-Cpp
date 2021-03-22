@@ -9,8 +9,6 @@ namespace ariel
     private:
         unsigned int max_rows;
         unsigned int max_columns;
-        //unsigned int min_rows;
-        //unsigned int min_columns;
 
         std::vector<std::vector<char>> board;
 
@@ -19,7 +17,6 @@ namespace ariel
         {
             board = std::vector<std::vector<char>>(5, std::vector<char>(5, '_'));
             max_rows =  max_columns = 5;
-            //min_rows = min_columns = 5;
         }
         ~Board() {}
         void post(unsigned int row, unsigned int column, Direction direction, std::string message);

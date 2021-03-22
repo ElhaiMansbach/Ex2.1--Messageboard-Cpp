@@ -11,21 +11,11 @@ namespace ariel
     {
         Board::max_rows = max(Board::max_rows, rows);
         Board::max_columns = max(Board::max_columns, columns);
-        //Board::min_rows = min(Board::min_rows, rows);
-        //Board::min_columns = min(Board::min_columns, columns);
         Board::board.resize(Board::max_rows);
         for (size_t i = 0; i < Board::max_rows; i++)
         {
             Board::board[i].resize(Board::max_columns, '_');
         }
-
-        // if (rows >= Board::rows)
-        //     Board::rows = rows;
-        // if (columns >= Board::columns)
-        //     Board::columns = columns;
-        // Board::board.resize(Board::rows);
-        // for (unsigned int i = 0; i < Board::rows; i++)
-        //     Board::board[i].resize(Board::columns, '_');
     }
 
     void Board::post(unsigned int row, unsigned int column, Direction direction, std::string message)
@@ -69,7 +59,6 @@ namespace ariel
                 {
                     column++;
                 }
-
                 else
                 {
                     row++;
@@ -80,8 +69,6 @@ namespace ariel
             {
                 ad += "_";
             }
-
-        
         return ad;
     }
     void Board::show()

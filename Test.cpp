@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include "Direction.hpp"
 #include "Board.hpp"
